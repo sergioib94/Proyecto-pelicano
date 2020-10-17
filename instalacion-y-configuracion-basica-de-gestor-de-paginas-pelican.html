@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+
+
+    <link id="pygments-light-theme" rel="stylesheet" type="text/css"
+          href="/theme/pygments/github.min.css">
+
+
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/fontawesome.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/brands.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/solid.css">
+
+
+
+
+
+
+
+<meta name="author" content="Sergio Ibáñez" />
+<meta name="description" content="En esta primera entrada se explicara un poco como se ha instalado y configurado el gestor de paginas web pelican con el cual ha sido creado este blog." />
+<meta name="keywords" content="pelican">
+
+
+<meta property="og:site_name" content="primer proyecto"/>
+<meta property="og:title" content="Instalacion y configuracion basica de Gestor de paginas Pelican"/>
+<meta property="og:description" content="En esta primera entrada se explicara un poco como se ha instalado y configurado el gestor de paginas web pelican con el cual ha sido creado este blog."/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content="/instalacion-y-configuracion-basica-de-gestor-de-paginas-pelican.html"/>
+<meta property="og:type" content="article"/>
+<meta property="article:published_time" content="2020-10-13 12:00:00+02:00"/>
+<meta property="article:modified_time" content=""/>
+<meta property="article:author" content="/author/sergio-ibanez.html">
+<meta property="article:section" content="Implantaciones web"/>
+<meta property="article:tag" content="pelican"/>
+<meta property="og:image" content="">
+
+  <title>primer proyecto &ndash; Instalacion y configuracion basica de Gestor de paginas Pelican</title>
+
+</head>
+<body class="light-theme">
+  <aside>
+    <div>
+      <a href="">
+        <img src="/theme/img/profile.png" alt="" title="">
+      </a>
+
+      <h1>
+        <a href=""></a>
+      </h1>
+
+
+
+      <nav>
+        <ul class="list">
+
+
+
+            <li>
+              <a target="_self" href="http://getpelican.com/" >Pelican</a>
+            </li>
+            <li>
+              <a target="_self" href="http://python.org/" >Python.org</a>
+            </li>
+            <li>
+              <a target="_self" href="http://jinja.pocoo.org/" >Jinja2</a>
+            </li>
+            <li>
+              <a target="_self" href="#" >You can modify those links in your config file</a>
+            </li>
+        </ul>
+      </nav>
+
+      <ul class="social">
+          <li>
+            <a  class="sc-You can add links in your config file" href="#" target="_blank">
+              <i class="fab fa-You can add links in your config file"></i>
+            </a>
+          </li>
+          <li>
+            <a  class="sc-Another social link" href="#" target="_blank">
+              <i class="fab fa-Another social link"></i>
+            </a>
+          </li>
+      </ul>
+    </div>
+
+  </aside>
+  <main>
+
+
+<article class="single">
+  <header>
+      
+    <h1 id="instalacion-y-configuracion-basica-de-gestor-de-paginas-pelican">Instalacion y configuracion basica de Gestor de paginas Pelican</h1>
+    <p>
+      Posted on mar 13 octubre 2020 in <a href="/category/implantaciones-web.html">Implantaciones web</a>
+
+    </p>
+  </header>
+
+
+  <div>
+    <h2><strong>Instalacion de Pelican</strong></h2>
+<p>Para poder instalar este gestor de paginas web, ejecutamos apt install pelican y una vez instalado ejecutamos apt install markdown, que es el idioma en el que se escribirán los artículos del blog. Una vez instalados pelican y markdown en nuestro entorno de desarrollo (nuestra máquina) estará listo para usarse.</p>
+<pre>
+apt install pelican
+apt install markdown
+</pre>
+
+<h2><strong>Configuracion de un sitio web</strong></h2>
+<p>Para comenzar la configuracion de nuestro sitio web, lo primero sera ejecutar el comando pelican-quickstart donde empezaran a salir preguntas sobre la configuracion que deberan responderse:</p>
+<ul>
+<li>Where do you want to create your new web site? [.] /home/sergioib/Pelican/Proyecto2</li>
+</ul>
+<p>Indicamos donde se van a generar los los archivos una vez que nuestro sitio web se genere.</p>
+<ul>
+<li>What will be the title of this web site? primer proyecto</li>
+</ul>
+<p>Le damos un nombre a nuestro sitio web. El nombre en principio no importa demasiado ya que mas adelante, al igual que otros parametros podra modificarse en pelicanconfig.py</p>
+<ul>
+<li>Who will be the author of this web site? Sergio Ibañez</li>
+</ul>
+<p>Indicamos el nombre del autor del sitio, es decir de la persona que crea el sitio, no es lo mismo que el autor de los artículos ya que un autor puede tener varios autores.</p>
+<ul>
+<li>What will be the default language of this web site? [es] es</li>
+</ul>
+<p>Indicamos el idioma por defecto de nuestro sitio web en formato ISO-639-1, en mi caso "es" de español.</p>
+<ul>
+<li>Do you want to specify a URL prefix? e.g., https://example.com   (Y/n) y</li>
+</ul>
+<p>Indicamos si queremos generar una URL como prefijo de nuestra web</p>
+<ul>
+<li>What is your URL prefix? (see above example; no trailing slash) http://www.proyecto2.com</li>
+</ul>
+<p>En el caso de haber indicado en la opcion anterior que si, indicamos la URL que tendra nuestro sitio.</p>
+<ul>
+<li>Do you want to enable article pagination? (Y/n) y</li>
+</ul>
+<p>Habilitamos la paginación de artículos (esto solo es necesario si se van ha crear varios articulos)</p>
+<ul>
+<li>How many articles per page do you want? [10] 10</li>
+</ul>
+<p>Si la opcion anterior la hemos habilitado, indicamos el numero de articulos que apareceran por pagina</p>
+<ul>
+<li>What is your time zone? [Europe/Paris] Europe/Madrid</li>
+</ul>
+<p>Indicamos la zona horaria</p>
+<ul>
+<li>Do you want to generate a tasks.py/Makefile to automate generation and publishing? (Y/n) y</li>
+</ul>
+<p>Indicamos si queremos que se generen un archivo markfile y un tasks.py. Esta opcion es muy util habilitarla ya que mas adelante es la opcion que nos permitira automatizar las tareas de creacion y administracion de nuestro sitio.</p>
+<p>Por ultimo dependiendo de donde vayamos a subir nuestra pagina para desplegarla posteriormente se indicara o no alguna de las siguientes opciones:</p>
+<ul>
+<li>Do you want to upload your website using FTP? (y/N) n</li>
+</ul>
+<p>Si deseamos subir nuestro sitio web usando FTP</p>
+<ul>
+<li>Do you want to upload your website using SSH? (y/N) n</li>
+</ul>
+<p>Si deseamos subir nuestro sitio web usando SSH</p>
+<ul>
+<li>Do you want to upload your website using Dropbox? (y/N) n</li>
+</ul>
+<p>Si deseamos subir nuestro sitio web usando dropbox</p>
+<ul>
+<li>Do you want to upload your website using S3? (y/N) n</li>
+</ul>
+<p>Si deseamos subirlo usando S3</p>
+<ul>
+<li>Do you want to upload your website using Rackspace Cloud Files? (y/N) n</li>
+</ul>
+<p>Si deseamos subirlo usando Rockspace Cloud Files</p>
+<ul>
+<li>Do you want to upload your website using GitHub Pages? (y/N) y</li>
+</ul>
+<p>Si deseamos subirlo usando Github</p>
+<ul>
+<li>Is this your personal page (username.github.io)? (y/N) n</li>
+</ul>
+<p>Por ultimo si elegios subir la pagina a github, nos preguntaran si username.github.io es nuestra pagina principal, en el caso de serlohabra que indicar yes.</p>
+<p>En mi caso elegi Github ya que mas adelante se usara Netlify que cogera el repositorio github de nuestro sitio web y lo desplegará.</p>
+<p>!(/images/pelican_inicio.png)</p>
+  </div>
+  <div class="tag-cloud">
+    <p>
+      <a href="/tag/pelican.html">pelican</a>
+    </p>
+  </div>
+
+
+
+
+
+</article>
+
+    <footer>
+<p>&copy;  </p>
+<p>
+Built with <a href="http://getpelican.com" target="_blank">Pelican</a> using <a href="http://bit.ly/flex-pelican" target="_blank">Flex</a> theme
+</p>    </footer>
+  </main>
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " primer proyecto ",
+  "url" : "",
+  "image": "",
+  "description": ""
+}
+</script>
+
+
+</body>
+</html>
